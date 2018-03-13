@@ -28,7 +28,10 @@
 		</table>
 	</form>
 	<br>
-	<% for ( GuestbookVO vo : list ) { %>
+<%
+	if (list != null ) {
+    	for ( GuestbookVO vo : list ) { 
+%>
 	<table width="510" border="1">
 		<tr>
 			<td>[<%= vo.getNo() %>]</td>
@@ -43,6 +46,9 @@
 		</tr>
 	</table>
 	<br />
-	<% } %>
+<%
+		}
+	}
+%>
 </body>
 </html>
